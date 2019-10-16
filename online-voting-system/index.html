@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home || Online Voting</title>
+</head>
+
+<body>
+  <!-- NAVBAR-->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Online Voting</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="navbarcollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarcollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#register" class="nav-link">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- showcase -->
+  <section id="showcase">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" ></li>
+        <li data-target="#myCarousel" data-slide-to="2" ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-image-1 active"></div>
+        <div class="carousel-item carousel-image-2 "></div>
+        <div class="carousel-item carousel-image-3 "></div>
+      </div>
+    </div>  
+  </section>
+
+  <!-- home icon section -->
+  <section id="home-icons" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-shield-alt fa-3x mb-2"></i>
+          <h3>Secure and Reliable</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quae deserunt a ipsam? Dolore, deleniti?</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-magic fa-3x mb-2"></i>
+          <h3>Easy to Organize, Easy to Vote</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quae deserunt a ipsam? Dolore, deleniti?</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-book-open fa-3x mb-2"></i>
+          <h3>Transparent and Auditable</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quae deserunt a ipsam? Dolore, deleniti?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- home heading -->
+  <section id="home-heading" class="p-5">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container pt-5">
+            <h1>Now you can vote anywhere, are you ready ?</h1>
+            <p class="d-none d-md-block">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A, velit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  info section -->
+  <section id="register" >
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-5">
+          <h2 class="display-4">Let's get Started</h2>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem libero autem corrupti magnam maxime iste est veniam repellat nulla atque.</p>
+          <a href="#" class="btn btn-outline-secondary mr-3">Sign up as Candidate</a>
+          <a href="#" class="btn btn-outline-secondary ml-3">Sign up as Voter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // configure slider
+    $('.carousel').carousel({
+      interval:6000,
+      pause:'hover'
+    });
+  </script>
+</body>
+
+</html>
