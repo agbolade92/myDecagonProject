@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title>Home || Online Voting</title>
+  <title>Login|| Online Voting</title>
 </head>
 
 <body>
@@ -26,83 +26,47 @@
           <li class="nav-item">
             <a href="index.html" class="nav-link">Home</a>
           </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Register</a>
+            <div class="dropdown-menu">
+              <a href="candidate-registration.html" class="dropdown-item">candidate</a>
+              <a href="voter-registration.html" class="dropdown-item">voter</a>
+            </div>
+          </li>
           <li class="nav-item">
-            <a href="#" class="nav-link logout">LogOut</a>
+            <a href="login.html" class="nav-link">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-    <!-- user -->
-  <section id="user">
-    <div class="container ">
+  <!-- login form -->
+  <section class="bg-light py-5">
+    <div class="container">
       <div class="row">
-        <h1 class="display-4" id="p-name"></h1>
+        <div class="col-md-6 offset-md-3 text-center bg-secondary py-3">
+            <h1 class="display-4">Admin Sign in</h1>
+              <form  id = "admin-login-form" >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Username" id="username">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fas fa-key"></i>
+                      </span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Password" id="password">
+                </div>
+                <button type="submit" id="submit" class="btn btn-outline-success btn-block">Log in</button>
+          </form> 
       </div>
-    </div>
   </section>
-
-  <!-- timer -->
-  <div id="timer" class="mb-4 bg-dark">
-    <div class="container">
-        <div class="row  ">
-            <div id="days" class="col-md-2"></div>
-            <div id="hours" class="col-md-2"></div>
-            <div id="minutes" class="col-md-2"></div>
-            <div id="seconds" class="col-md-2"></div>
-        </div>
-    </div>
-  </div>
-
-  <!-- result -->
-  <div id="result-div"class="mb-4 bg-success">
-    <div class="container">
-      <div class="row">
-        <div id="result" class="col-md-6 offset-md-3"></div>
-      </div>
-    </div>
-  </div>
-
-    <!-- search -->
-    <div id="search" class=" mb-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 offset-md-6">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="search"><div class="input-group-append">
-                <button class="btn btn-dark">search</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <!-- table for candidate-->
-  <section class="mb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col ml-auto">
-          <div class="card">
-            <div class="card-header">
-              <h4>Candidates</h4>
-            </div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Age</th>
-                      <th>Sex</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody id="candidate-table"></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-    
  <!-- footer -->
   <footer class="bg-secondary text-white">
     <div class="container">
@@ -120,9 +84,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <script src="js/logout.js"></script>
-    <script src="js/profile.js"></script>
+    <script src="js/admin-login.js"></script>
 </body>
 
 </html>

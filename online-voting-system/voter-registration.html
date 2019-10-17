@@ -47,7 +47,7 @@
         <div class="col-md-6 text-center">
             <h1 class="display-4">Voter Registration Form</h1>
             <p class="lead">Please kindly fill the form below</p>
-              <form  id = "voter-form" action="http://localhost:3000/voters">
+              <form  id = "voter-form" action="http://localhost:3000/voters" method="POST">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -78,7 +78,7 @@
                         <i class="fas fa-key"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control place" placeholder="Confirm Password" id="password2">
+                    <input type="password" class="form-control place" placeholder="Confirm Password" id="password2">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -125,6 +125,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+    <script src="js/voter-validation.js"></script>
 </body>
 
 </html>

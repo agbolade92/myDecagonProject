@@ -1,0 +1,74 @@
+{
+  "admin": [
+    {
+      "name": "admin",
+      "username": "admin",
+      "password": "admin",
+      "id": 1
+    }
+  ],
+  "voters": [
+    {
+      "name": "sunday",
+      "email": "sunday@gmail.com",
+      "password": "12345",
+      "age": "24",
+      "sex": "male",
+      "id": 1
+    },
+    {
+      "name": "Monday",
+      "email": "monday@gmail.com",
+      "password": "12345",
+      "age": "34",
+      "sex": "male",
+      "id": 2
+    },
+    {
+      "name": "sam good",
+      "email": "samgood@gmail.com",
+      "password": "samgood",
+      "age": "30",
+      "sex": "male",
+      "id": 3
+    }
+  ],
+  "candidates": [
+    {
+      "name": "sunday sunday",
+      "email": "sunday@gmail.com",
+      "password": "12345678",
+      "age": "24",
+      "sex": "male",
+      "votes": "6",
+      "id": 2
+    },
+    {
+      "name": "sunday sunday",
+      "email": "sunday@gmail.com",
+      "password": "12345678",
+      "age": "24",
+      "sex": "male",
+      "votes": "13",
+      "id": 3
+    },
+    {
+      "name": "tom ford",
+      "email": "sunday@gmail.com",
+      "password": "12345678",
+      "age": "24",
+      "sex": "male",
+      "votes": "18",
+      "id": 4
+    },
+    {
+      "name": "dan fodio",
+      "email": "danfodio@gmail.com",
+      "password": "danfodio",
+      "age": "30",
+      "sex": "male",
+      "votes": "4",
+      "id": 5
+    }
+  ]
+}
