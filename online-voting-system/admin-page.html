@@ -24,7 +24,10 @@
       <div class="collapse navbar-collapse" id="navbarcollapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="#candidate-section" class="nav-link">Candidates</a>
+          </li>
+          <li class="nav-item">
+            <a href="#voter-section" class="nav-link">Voters</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link logout">LogOut</a>
@@ -63,23 +66,38 @@
     </div>
   </div>
   
+
+  <!-- set deadline for vote -->
+  <div  class=" mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 offset-md-5">
+          <div class="card border-white">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="set deadline" id="deadline" placeholder="search"><div class="input-group-append"><input class="btn btn-primary" type="submit" value="submit" id="deadline-submit"></div>
+            </div> 
+            <p class=" text-muted">e.g 29 April 2018 9:56:00 GMT+01:00</p> 
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   
     <!-- search -->
-    <div id="search" class=" mb-4">
+    <div  class=" mb-4">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 offset-md-6">
+          <div class="col-md-6 offset-md-3">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="search"><div class="input-group-append">
-                <button class="btn btn-dark">search</button>
-              </div>
+              <input type="text" class="form-control" placeholder="search" id="search" placeholder="search">
             </div>
           </div>
         </div>
       </div>
     </div>
   <!-- table for candidate -->
-  <section class="mb-5">
+  <section id="candidate-section" class="mb-3">
     <div class="container">
       <div class="row">
         <div class="col-md-9">
@@ -87,7 +105,7 @@
             <div class="card-header">
               <h4>Candidates</h4>
             </div>
-            <table class="table table-striped">
+            <table id="candidate-search" class="table table-striped">
                 <thead>
                     <tr>
                       <th>Name</th>
@@ -100,12 +118,26 @@
             </table>
           </div>
         </div>
+        <div class="col-md-3">
+          <div class="card text-center bg-primary text-white mb-3">
+            <div class="card-body">
+              <h1 id="t-candidates"></h1>
+              <i class="fas fa-user fa-3x" ></i>
+            </div>
+          </div>
+          <div class="card text-center bg-primary text-white mb-3">
+              <div class="card-body">
+                <h1 id="t-voters"></h1>
+                <i class="fas fa-user fa-3x" ></i>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   </section>
     
   <!-- table for voter -->
-  <section class="mb-5">
+  <section id="voter-section" class="mb-5">
       <div class="container">
         <div class="row">
           <div class="col-md-9 ">
@@ -139,6 +171,31 @@
       </div>
     </div>
   </footer>
+
+  <!-- edit modal -->
+  <div class="modal text-dark" id="edit-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Candidate info</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="edit-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="edit-name" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" value="submit" class="btn btn-sm btn-primary btn-block">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>

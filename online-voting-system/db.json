@@ -9,49 +9,23 @@
   ],
   "voters": [
     {
-      "name": "sunday",
-      "email": "sunday@gmail.com",
-      "password": "12345",
-      "age": "24",
-      "sex": "male",
-      "id": 1
-    },
-    {
-      "name": "Monday",
-      "email": "monday@gmail.com",
-      "password": "12345",
-      "age": "34",
-      "sex": "male",
-      "id": 2
-    },
-    {
       "name": "sam good",
       "email": "samgood@gmail.com",
       "password": "samgood",
       "age": "30",
       "sex": "male",
       "id": 3
+    },
+    {
+      "name": "Dan obi",
+      "email": "danobi@gmail.com",
+      "password": "danobi",
+      "age": "33",
+      "sex": "male",
+      "id": 4
     }
   ],
   "candidates": [
-    {
-      "name": "sunday sunday",
-      "email": "sunday@gmail.com",
-      "password": "12345678",
-      "age": "24",
-      "sex": "male",
-      "votes": "6",
-      "id": 2
-    },
-    {
-      "name": "sunday sunday",
-      "email": "sunday@gmail.com",
-      "password": "12345678",
-      "age": "24",
-      "sex": "male",
-      "votes": "13",
-      "id": 3
-    },
     {
       "name": "tom ford",
       "email": "sunday@gmail.com",
@@ -69,6 +43,15 @@
       "sex": "male",
       "votes": "4",
       "id": 5
+    },
+    {
+      "name": "Tobi ola",
+      "email": "tobiola@gmail.com",
+      "password": "tobiola",
+      "age": "34",
+      "sex": "female",
+      "votes": "0",
+      "id": 6
     }
   ]
 }
