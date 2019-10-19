@@ -71,12 +71,13 @@
   <div  class=" mb-4">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 offset-md-5">
+        <div class="col-md-6 offset-md-3">
           <div class="card border-white">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="set deadline" id="deadline" placeholder="search"><div class="input-group-append"><input class="btn btn-primary" type="submit" value="submit" id="deadline-submit"></div>
+              <input type="text" class="form-control" placeholder="Set Deadline for Voting" id="set-timer" placeholder="search"><div class="input-group-append"><input class="btn btn-primary" type="submit" value="set Timer" id="set-timer-submit"></div>
+              <input type="submit" class="btn btn-primary ml-2" id="reset-timer" value="Reset Timer">
             </div> 
-            <p class=" text-muted">e.g 29 April 2018 9:56:00 GMT+01:00</p> 
+            <p class=" text-muted">e.g 26 October 2019 9:56:00 GMT+01:00</p> 
             </div>  
           </div>
         </div>
@@ -84,18 +85,19 @@
     </div>
   </div>
   
-    <!-- search -->
+    <!-- candidate search -->
     <div  class=" mb-4">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 offset-md-3">
+          <div class="col-md-5 offset-md-4">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="search" id="search" placeholder="search">
+              <input type="text" class="form-control" placeholder="search candidates" id="candidate-search">
             </div>
           </div>
         </div>
       </div>
     </div>
+
   <!-- table for candidate -->
   <section id="candidate-section" class="mb-3">
     <div class="container">
@@ -105,7 +107,7 @@
             <div class="card-header">
               <h4>Candidates</h4>
             </div>
-            <table id="candidate-search" class="table table-striped">
+            <table id="candidate-table" class="table table-striped">
                 <thead>
                     <tr>
                       <th>Name</th>
@@ -114,7 +116,7 @@
                       <th>Action</th>
                     </tr>
                   </thead>
-                  <tbody id="candidate-table"></tbody>
+                  <tbody id="candidate-tbody"></tbody>
             </table>
           </div>
         </div>
@@ -135,6 +137,19 @@
       </div>
     </div>
   </section>
+
+  <!-- voter search  -->
+  <div  class=" mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 offset-md-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="search voters" id="voter-search">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     
   <!-- table for voter -->
   <section id="voter-section" class="mb-5">
@@ -145,7 +160,7 @@
               <div class="card-header">
                 <h4>Voters</h4>
               </div>
-              <table class="table table-striped">
+              <table id="voter-table" class="table table-striped">
                   <thead>
                       <tr>
                         <th>Name</th>
@@ -154,13 +169,14 @@
                         <th>Action</th>
                       </tr>
                     </thead>
-                    <tbody id="voter-table"></tbody>
+                    <tbody id="voter-tbody"></tbody>
               </table>
             </div>
           </div>
         </div>
       </div>
     </section>
+
  <!-- footer -->
   <footer class="bg-secondary text-white">
     <div class="container">
@@ -173,17 +189,17 @@
   </footer>
 
   <!-- edit modal -->
-  <div class="modal text-dark" id="edit-modal">
+  <div class="modal text-dark" id="candidate-edit-modal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Edit Candidate info</h5>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
+          <button class="close"  data-dismiss="modal">
+            <span class="bg-danger">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form id="edit-form">
+          <form>
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="edit-name" class="form-control">
@@ -191,7 +207,33 @@
           </form>
         </div>
         <div class="modal-footer">
-          <input type="submit" value="submit" class="btn btn-sm btn-primary btn-block">
+          <button type="submit" data-dismiss="modal" class="btn btn-success btn-block" id="candidate-edit-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- voter edit modal -->
+  <div class="modal text-dark" id="voter-edit-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Voter info</h5>
+          <button class="close"  data-dismiss="modal">
+            <span class="bg-danger">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form >
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="edit-name1" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" data-dismiss="modal" class="btn btn-success btn-block" id="voter-edit-submit">Submit</button>
         </div>
       </div>
     </div>
@@ -203,8 +245,9 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-    <script src="js/logout.js"></script>
+    <script src="js/admin-logout.js"></script>
     <script src="js/admin-profile.js"></script>
+    <script src="js/timer1.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ $(document).ready(function(){
     type:'GET',
     success:function(data){
       var id = data.map((user)=> user.id)
-      localStorage.setItem('userID',Number(id));
+      localStorage.setItem('adminID',Number(id));
       window.location = 'admin-page.html'
 
     }

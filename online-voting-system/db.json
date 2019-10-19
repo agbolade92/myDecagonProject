@@ -9,7 +9,7 @@
   ],
   "voters": [
     {
-      "name": "sam good",
+      "name": "Sam Good",
       "email": "samgood@gmail.com",
       "password": "samgood",
       "age": "30",
@@ -23,16 +23,24 @@
       "age": "33",
       "sex": "male",
       "id": 4
+    },
+    {
+      "name": "tom ken",
+      "email": "tomken@gmail.com",
+      "password": "tomken",
+      "age": "40",
+      "sex": "male",
+      "id": 5
     }
   ],
   "candidates": [
     {
-      "name": "tom ford",
+      "name": "Tom Ford",
       "email": "sunday@gmail.com",
       "password": "12345678",
       "age": "24",
       "sex": "male",
-      "votes": "18",
+      "votes": "23",
       "id": 4
     },
     {
@@ -45,13 +53,22 @@
       "id": 5
     },
     {
-      "name": "Tobi ola",
+      "name": "Tobi alabi",
       "email": "tobiola@gmail.com",
       "password": "tobiola",
       "age": "34",
       "sex": "female",
       "votes": "0",
       "id": 6
+    },
+    {
+      "name": "Ken Tom",
+      "email": "kentom@gmail.com",
+      "password": "kentom",
+      "age": "30",
+      "sex": "female",
+      "votes": "0",
+      "id": 7
     }
   ]
 }

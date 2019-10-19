@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title>Home || Online Voting</title>
+  <title>Login|| Online Voting</title>
 </head>
 
 <body>
@@ -40,73 +40,32 @@
       </div>
     </div>
   </nav>
-
+  <!-- login form -->
   <section class="bg-light py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 text-center">
-            <h1 class="display-4">Voter Registration Form</h1>
-            <p class="lead">Please kindly fill the form below</p>
-              <form  id = "voter-form" action="http://localhost:3000/voters" method="POST">
+        <div class="col-md-6 offset-md-3 text-center bg-secondary py-3">
+            <h1 class="display-4">Sign in</h1>
+              <form  id = "login-form" >
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <i class="fas fa-user"></i>
+                      <i class="fas fa-envelope"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Name" id="name">
+                  <input type="email" class="form-control" placeholder="Email" id="email">
                 </div>
                 <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="fas fa-envelope"></i>
-                      </span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Email" id="email">
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="fas fa-key"></i>
-                    </span>
-                  </div>
-                  <input type="password" class="form-control" placeholder="Password" id="password1">
-                </div>
-                  <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text">
                         <i class="fas fa-key"></i>
                       </span>
                     </div>
-                    <input type="password" class="form-control place" placeholder="Confirm Password" id="password2">
-                  </div>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="fas fa-user"></i>
-                      </span>
-                    </div>
-                    <input type="number" class="form-control" placeholder="Age" id="age">
-                  </div>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="fas fa-user"></i>
-                      </span>
-                    </div>
-                    <select class="form-control" id="sex">
-                        <option value="null">select sex</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                  </div>
-                <button type="submit" id="submit" class="btn btn-outline-success btn-block">submit</button>
+                    <input type="password" class="form-control" placeholder="Password" id="password">
+                </div>
+                <button type="submit" id="submit" class="btn btn-outline-success btn-block">Log in</button>
           </form> 
       </div>
-      <div class="col-md-6 align-self-end">
-          <img src="./img/register.jpg" alt="" class="img-fluid rounded-circle">
-        </div>
-    </div>
   </section>
  <!-- footer -->
   <footer class="bg-secondary text-white">
@@ -125,7 +84,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-    <script src="js/voter-validation.js"></script>
+    <script src="js/voter-login.js"></script>
 </body>
 
 </html>
