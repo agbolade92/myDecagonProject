@@ -62,5 +62,11 @@ span {
   color: #abcd58;
 }
 
-/* dashboard */
+/* scroll-top button */
+#back-to-top{
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  display: none;
+}
 

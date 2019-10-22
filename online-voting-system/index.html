@@ -15,7 +15,7 @@
 
 <body>
   <!-- NAVBAR-->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" id="main-nav">
     <div class="container">
       <a href="index.html" class="navbar-brand">Online Voting</a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="navbarcollapse">
@@ -38,7 +38,7 @@
   </nav>
 
   <!-- showcase -->
-  <section id="showcase">
+  <section id="showcase" class="mt-5">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -105,6 +105,10 @@
       </div>
     </div>
   </section>
+
+  <a href="#" id="back-to-top" class="btn btn-primary" role="button">top</a>
+  
+
   <!-- footer -->
   <footer class="bg-secondary text-white">
       <div class="container">
@@ -124,8 +128,42 @@
     crossorigin="anonymous"></script>
 
   <script>
-    // Get the current year for the copyright
-    $('#year').text(new Date().getFullYear());
+    // smooth scrolling
+    $('#main-nav a').click(function(e)
+    {
+      if(this.hash !== '')
+      {
+        e.preventDefault();
+        var hash = this.hash;
+        $('html,body').animate
+        ({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){window.location.hash = hash;})
+      }
+    })
+
+    // scroll top
+    $(document).ready(function(){
+      $(window).scroll(function (){
+        if($(this).scrollTop() > 50 )
+        {
+          $('#back-to-top').show()
+        } else 
+        {
+          $('#back-to-top').hide()
+        } 
+      });
+      // scroll body to 0px on click
+      $('#back-to-top').click(function ()
+    {
+      $('body,html').animate(
+        {
+          scrollTop:0
+        }, 400)
+        return false;
+    })
+    });
+    
 
     // configure slider
     $('.carousel').carousel({
