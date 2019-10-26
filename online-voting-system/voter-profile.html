@@ -37,7 +37,7 @@
   <section id="user">
     <div class="container ">
       <div class="row">
-        <h1 class="display-4" id="p-name"></h1>
+        <h1 class="display-3" id="p-name"></h1>
       </div>
     </div>
   </section>
@@ -63,6 +63,17 @@
     </div>
   </div>
 
+    <!-- view winner -->
+  <div id="click-show-winner"class="mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div id="result" class="col-md-10 offset-md-2">
+          <p class="display-4">click <span class="d-inline display-4 text-info">show result</span> to view winner</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- search -->
     <div id="search" class=" mb-4">
       <div class="container">
@@ -70,6 +81,7 @@
           <div class="col-md-5 offset-md-4">
             <div class="input-group">
               <input type="text" id="candidate-search-input"class="form-control" placeholder="search">
+              <input type="submit" class="btn btn-primary ml-2" id="show-result" value="Show winner">
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@
   <section id="user" class="mt-5 py-3">
     <div class="container ">
       <div class="row">
-        <h1 class="display-4" id="p-name"></h1>
+        <h1 class="display-3" id="p-name"></h1>
       </div>
     </div>
   </section>
@@ -71,10 +71,11 @@
   <div  class=" mb-4">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-8 offset-md-1">
           <div class="card border-white">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Set Deadline for Voting" id="set-timer" placeholder="search"><div class="input-group-append"><input class="btn btn-primary" type="submit" value="set Timer" id="set-timer-submit"></div>
+              <input type="datetime-local" class="form-control" placeholder="Set Deadline for Voting" id="set-timer" placeholder="search"><div class="input-group-append"><input class="btn btn-primary" type="submit" value="set Timer" id="set-timer-submit"></div>
+              <input type="submit" class="btn btn-primary ml-2" id="show-result" value="Show winner">
               <input type="submit" class="btn btn-primary ml-2" id="reset-timer" value="Reset Timer">
             </div> 
             <p class=" text-muted">e.g 26 October 2019 9:56:00 GMT+01:00</p> 

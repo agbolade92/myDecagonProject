@@ -11,10 +11,11 @@ $("#result-div").hide();
     var endTime
 
     value = $('#set-timer').val()
+    if(value == ''){ return alert('you have not set deadline')}
+    else{
 
-    localStorage.setItem('value', value )
+    localStorage.setItem('value', value )}
     //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");
-    console.log(endTime);
      x = setInterval(function(){
     endTime = new Date(value);
     //console.log(endTime);			
@@ -43,35 +44,22 @@ $("#result-div").hide();
     $("#timer").show();
 
     if(timeLeft <= 0 ) { $('#timer').hide();
+    clearInterval(x)
+    localStorage.setItem('value', '')
+      showWinner()
+      }}, 1000);
+      $('#set-timer').val('');
       
-    $.ajax({
-      url:`http://localhost:3000/candidates`,
-      type:'GET',
-    dataType:'json',
-    success:function(data){
-      var index
-      var arr1 = []
-      var highest = 0
-      var candidate 
-      data.forEach((person)=> {
-        arr1.push(Number(person.votes))
-      })
-      highest = Math.max(...arr1)
-      index = data.findIndex(function(person){
-        return person.votes == highest
-      })
-    candidate = data[index].name
-    $("#result").html(`<h1 class="display-4">The Winner is ${candidate}</h1>`);
-  
-    $("#result-div").show();
-   
-  }})}}, 1000);
-
-  $('#set-timer').val('');
-  
    })
  
   
+   $('#show-result').click((e) =>{
+    $('#timer').hide()
+    showWinner()
+    $("#result-div").toggle()
+     $('#set-timer').val('')
+  })
+
 
    $('#reset-timer').click((e) =>{
      $('#timer').hide()
@@ -81,7 +69,32 @@ $("#result-div").hide();
       $('#set-timer').val('')
    })
   
+   
+   function showWinner(){
+   $.ajax({
+    url:`http://localhost:3000/candidates`,
+    type:'GET',
+  dataType:'json',
+  success:function(data){
+    var index
+    var arr1 = []
+    var highest = 0
+    var candidate
+    data.forEach((person)=> {
+      arr1.push(Number(person.votes))
+    })
+    highest = Math.max(...arr1)
+    index = data.findIndex(function(person){
+      return person.votes == highest
+    })
+    if(highest == 0){
+      $("#result").html(`<h1 class="display-4 text-center">Election has not been done</h1>`)
+    }else{
+  candidate = data[index].name
+  $("#result").html(`<h1 class="display-4 text-center">The Winner is ${candidate}</h1>`);}
+  }})}
 
-// $("#result-div").hide();
+  
+
 
 
